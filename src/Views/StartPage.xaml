@@ -6,10 +6,9 @@
     Title="Maui Planets">
 
     <Grid
-        IgnoreSafeArea="True">
+        IgnoreSafeArea="{OnPlatform Android=False, iOS=True}">
 
         <!-- Planet Images -->
-
         <Image
             Source="earth.png"
             VerticalOptions="Start"
@@ -115,7 +114,8 @@
                     Style="{StaticResource ButtonStyle}"
                     Text="Explore Now"
                     HorizontalOptions="Center"
-                    Margin="0,12,0,6"/>
+                    Margin="0,12,0,6"
+                    Clicked="ExploreNow_Clicked"/>
 
             </VerticalStackLayout>
 

@@ -22,10 +22,7 @@
 
         <!-- Navigation Page -->
         <Style TargetType="NavigationPage" ApplyToDerivedTypes="True">
-            <Setter Property="BarBackgroundColor" Value="{StaticResource PageBackgroundColor}"/>
-            <Setter Property="BarTextColor" Value="White"/>
             <Setter Property="BackgroundColor" Value="{StaticResource PageBackgroundColor}" />
-            <Setter Property="IconColor" Value="#696969" />
         </Style>
 
         <!-- Grid Styles -->
