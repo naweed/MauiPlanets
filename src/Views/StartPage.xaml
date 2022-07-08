@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiPlanets.Views.StartPage"
+    Title="Maui Planets">
+
+    <Grid
+        IgnoreSafeArea="True">
+
+        <!-- Planet Images -->
+
+        <Image
+            Source="earth.png"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            TranslationX="-48"
+            TranslationY="148"
+            WidthRequest="96"
+            HeightRequest="96"/>
+
+        <Image
+            Source="jupiter.png"
+            VerticalOptions="Center"
+            HorizontalOptions="Start"
+            TranslationX="-100"
+            TranslationY="-64"
+            WidthRequest="200"
+            HeightRequest="200"/>
+
+        <Image
+            Source="saturn.png"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            TranslationX="32"
+            TranslationY="76"
+            WidthRequest="300"
+            HeightRequest="300"/>
+
+        <Image
+            Source="mars.png"
+            VerticalOptions="Start"
+            HorizontalOptions="Start"
+            TranslationX="-100"
+            TranslationY="96"
+            WidthRequest="140"
+            HeightRequest="140"/>
+
+        <Image
+            Source="mercury.png"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            TranslationX="18"
+            TranslationY="72"
+            WidthRequest="66"
+            HeightRequest="66"/>
+
+        <Image
+            Source="venus.png"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            TranslationX="84"
+            TranslationY="208"
+            WidthRequest="76"
+            HeightRequest="76"/>
+
+        <Image
+            Source="uranus.png"
+            VerticalOptions="Center"
+            HorizontalOptions="End"
+            TranslationX="100"
+            TranslationY="-72"
+            WidthRequest="200"
+            HeightRequest="200"/>
+
+        <Image
+            Source="neptune.png"
+            VerticalOptions="Start"
+            HorizontalOptions="End"
+            TranslationX="100"
+            TranslationY="-72"
+            WidthRequest="200"
+            HeightRequest="200"/>
+
+        <!-- Intro Box -->
+        <Border
+            Padding="24,32"
+            BackgroundColor="{StaticResource FrameBackgroundColor}"
+            Stroke="{StaticResource BorderColor}"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Margin="20">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="24"/>
+            </Border.StrokeShape>
+
+            <VerticalStackLayout
+                Spacing="16">
+
+                <Label
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Style="{StaticResource IntroPageHeaderStyle}"
+                    Text="Hello!"/>
+
+
+                <Label
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    LineBreakMode="WordWrap"
+                    Style="{StaticResource IntroPageTextStyle}"
+                    Text="Want to know and explain all things about the planets in the Milky Way galaxy?"/>
+
+                <Button
+                    Style="{StaticResource ButtonStyle}"
+                    Text="Explore Now"
+                    HorizontalOptions="Center"
+                    Margin="0,12,0,6"/>
+
+            </VerticalStackLayout>
+
+        </Border>
+
+    </Grid>
+
+</ContentPage>
