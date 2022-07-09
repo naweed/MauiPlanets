@@ -14,9 +14,9 @@ internal static class PlanetsService
 			AccentColorEnd = null,
 			Images = new()
             {
-				"",
-				"",
-				""
+                "https://cdn.theatlantic.com/thumbor/D15rQggf6357X1-u6VpTD2N1yQE=/0x27:1041x613/976x549/media/img/mt/2017/04/MercuryImage/original.jpg",
+                "https://solarsystem.nasa.gov/system/feature_items/images/73_carousel_mercury_2.jpg",
+                "https://solarsystem.nasa.gov/system/feature_items/images/75_mercury_carousel_1.jpg"
             }
 		},
         new()
@@ -29,9 +29,10 @@ internal static class PlanetsService
             AccentColorEnd = null,
             Images = new()
             {
-                "",
-                "",
-                ""
+                "https://solarsystem.nasa.gov/system/feature_items/images/143_Venus-800x600.jpg",
+                "https://solarsystem.nasa.gov/system/feature_items/images/147_Hubble_Venus_Clouds-800x600.jpg",
+                "https://solarsystem.nasa.gov/system/feature_items/images/146_venus_carousel_3.jpg",
+                "https://solarsystem.nasa.gov/system/feature_items/images/144_PIA00485_Venus_Caldera-800.jpg"
             }
         },
         new()
@@ -44,9 +45,9 @@ internal static class PlanetsService
             AccentColorEnd = null,
             Images = new()
             {
-                "",
-                "",
-                ""
+                "https://solarsystem.nasa.gov/system/feature_items/images/68_epicearthmoonstill_800.png",
+                "https://solarsystem.nasa.gov/system/feature_items/images/69_earth_carousel_3.jpg",
+                "https://images.newscientist.com/wp-content/uploads/2019/09/09162708/iss048-e-2035_lrg.jpg?width=778"
             }
         },
         new()
@@ -59,9 +60,9 @@ internal static class PlanetsService
             AccentColorEnd = null,
             Images = new()
             {
-                "",
-                "",
-                ""
+                "https://researchfdi.com/wp-content/uploads/2021/10/8944_1-PIA24546-1280.jpeg",
+                "https://www.worldatlas.com/r/w1300-q80/upload/bb/c3/32/shutterstock-1041249343.jpg",
+                "https://www.openaccessgovernment.org/wp-content/uploads/2021/04/dreamstime_xxl_121672573-scaled.jpg"
             }
         },
         new()
@@ -120,9 +121,9 @@ internal static class PlanetsService
             AccentColorEnd = null,
             Images = new()
             {
-                "",
-                "",
-                ""
+                "https://solarsystem.nasa.gov/system/feature_items/images/82_carousel_neptune_1.jpg",
+                "https://solarsystem.nasa.gov/system/feature_items/images/86_carousel_neptune_5.jpg",
+                "https://solarsystem.nasa.gov/system/feature_items/images/84_neptune_carousel_2.jpg"
             }
         }
     };
