@@ -63,6 +63,9 @@
 	  <MauiXaml Update="Views\PlanetsPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\PlanetDetailsPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiFont Include="Resources\Fonts\Montserrat-Bold.ttf" />

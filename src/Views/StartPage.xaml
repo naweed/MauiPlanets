@@ -10,6 +10,8 @@
 
         <!-- Planet Images -->
         <Image
+            x:Name="imgEarth"
+            Opacity="0"
             Source="earth.png"
             VerticalOptions="Start"
             HorizontalOptions="Center"
@@ -19,6 +21,8 @@
             HeightRequest="96"/>
 
         <Image
+            x:Name="imgJupiter"
+            Opacity="0"
             Source="jupiter.png"
             VerticalOptions="Center"
             HorizontalOptions="Start"
@@ -28,6 +32,8 @@
             HeightRequest="200"/>
 
         <Image
+            x:Name="imgSaturn"
+            Opacity="0"
             Source="saturn.png"
             VerticalOptions="Center"
             HorizontalOptions="Center"
@@ -37,6 +43,8 @@
             HeightRequest="300"/>
 
         <Image
+            x:Name="imgMars"
+            Opacity="0"
             Source="mars.png"
             VerticalOptions="Start"
             HorizontalOptions="Start"
@@ -46,6 +54,8 @@
             HeightRequest="140"/>
 
         <Image
+            x:Name="imgMercury"
+            Opacity="0"
             Source="mercury.png"
             VerticalOptions="Start"
             HorizontalOptions="Center"
@@ -55,6 +65,8 @@
             HeightRequest="66"/>
 
         <Image
+            x:Name="imgVenus"
+            Opacity="0"
             Source="venus.png"
             VerticalOptions="Start"
             HorizontalOptions="Center"
@@ -64,6 +76,8 @@
             HeightRequest="76"/>
 
         <Image
+            x:Name="imgUranus"
+            Opacity="0"
             Source="uranus.png"
             VerticalOptions="Center"
             HorizontalOptions="End"
@@ -73,6 +87,8 @@
             HeightRequest="200"/>
 
         <Image
+            x:Name="imgNeptune"
+            Opacity="0"
             Source="neptune.png"
             VerticalOptions="Start"
             HorizontalOptions="End"
@@ -83,6 +99,8 @@
 
         <!-- Intro Box -->
         <Border
+            x:Name="frmIntro"
+            Opacity="0"
             Padding="24,32"
             BackgroundColor="{StaticResource FrameBackgroundColor}"
             Stroke="{StaticResource BorderColor}"
