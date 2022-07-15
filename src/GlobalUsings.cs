@@ -12,3 +12,4 @@ global using global::Microsoft.Maui.LifecycleEvents;
 
 global using MauiPlanets.Views;
 global using MauiPlanets.Models;
+global using MauiPlanets.Services;
