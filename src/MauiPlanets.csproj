@@ -27,6 +27,9 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-ios|AnyCPU'">
+	  <EnableCodeSigning>false</EnableCodeSigning>
+	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#191932" />
@@ -75,7 +78,7 @@
 	  <MauiFont Include="Resources\Fonts\Montserrat-SemiBold.ttf" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.Maui.Extensions" Version="6.0.408" />
-	  <PackageReference Include="Microsoft.Maui.Dependencies" Version="6.0.408" />
+	  <PackageReference Include="Microsoft.Maui.Extensions" Version="6.0.536" />
+	  <PackageReference Include="Microsoft.Maui.Dependencies" Version="6.0.536" />
 	</ItemGroup>
 </Project>
