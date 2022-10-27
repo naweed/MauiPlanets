@@ -4,14 +4,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:models="clr-namespace:MauiPlanets.Models"
     x:Class="MauiPlanets.Views.PlanetDetailsPage"
-    x:DataType="models:Planet"
+    x:DataType="models:Planet" 
     Title="Planet Details">
 
     <Grid
-        Margin="24,52,24,0"
-        IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
-        ColumnDefinitions="*,*"
-        RowDefinitions="Auto,*">
+        Padding="24,52,24,0"
+        IgnoreSafeArea="{OnPlatform Android=False, iOS=True}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
 
         <!-- Header Icons -->
         <ImageButton
@@ -37,8 +44,8 @@
         <!-- Main Content ScrollView -->
         <ScrollView
             Grid.Row="1"
-            Grid.Column="0"
-            Grid.ColumnSpan="2"
+            Grid.Column="0" 
+            Grid.ColumnSpan="2" 
             HorizontalScrollBarVisibility="Never"
             VerticalScrollBarVisibility="Never"
             Margin="0,16,0,0">
@@ -76,9 +83,8 @@
                 <!-- Planet Info -->
                 <Label
                     Style="{StaticResource PlanetDetailsTextStyle}"
-                    LineBreakMode="WordWrap"
+                    LineBreakMode="WordWrap" 
                     Text="{Binding Description}" />
-
 
                 <!-- Divider -->
                 <Rectangle
@@ -92,18 +98,16 @@
                     Style="{StaticResource PlanetHeaderSubtitleStyle}"
                     Text="Gallery" />
 
-                <CollectionView
-                    Margin="0,-6,0,0"
-                    HeightRequest="160"
-                    ItemsSource="{Binding Images}">
-
-                    <CollectionView.ItemsLayout>
-                        <LinearItemsLayout
-                            Orientation="Horizontal"
-                            ItemSpacing="16" />
-                    </CollectionView.ItemsLayout>
-
-                    <CollectionView.ItemTemplate>
+                <ScrollView Orientation="Horizontal"
+                            Margin="0,-6,0,0"
+                    
+                            >
+                    <HorizontalStackLayout
+                        HeightRequest="160"
+                        Spacing="16"
+                        BindableLayout.ItemsSource="{Binding Images}"
+                        >
+                        <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <Image
                                 Source="{Binding .}"
@@ -113,14 +117,19 @@
                                 WidthRequest="160">
                                 <Image.Clip>
                                     <RoundRectangleGeometry
+                                        
                                         Rect="0,0,160,160"
                                         CornerRadius="16" />
                                 </Image.Clip>
                             </Image>
                         </DataTemplate>
-                    </CollectionView.ItemTemplate>
+                    </BindableLayout.ItemTemplate>
 
-                </CollectionView>
+                    </HorizontalStackLayout>
+
+                </ScrollView>
+
+                
 
             </VerticalStackLayout>
 

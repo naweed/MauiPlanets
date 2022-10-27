@@ -9,13 +9,14 @@ public partial class PlanetsPage : ContentPage
 		InitializeComponent();
 	}
 
-    protected override void OnAppearing()
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
     {
-        base.OnAppearing();
+        base.OnNavigatedTo(args);
 
-        lstPopularPlanets.ItemsSource = PlanetsService.GetFeaturedPlanets();
-        lstAllPlanets.ItemsSource = PlanetsService.GetAllPlanets();
+        BindableLayout.SetItemsSource(lstPopularPlanets, PlanetsService.GetFeaturedPlanets());
+        BindableLayout.SetItemsSource(lstAllPlanets, PlanetsService.GetAllPlanets());
     }
+
 
     async void Planets_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
     {
@@ -41,5 +42,10 @@ public partial class PlanetsPage : ContentPage
         _ = MainContentGrid.FadeTo(1, AnimationDuration);
         _ = MainContentGrid.ScaleTo(1, AnimationDuration);
         await MainContentGrid.TranslateTo(0, 0, AnimationDuration, Easing.CubicIn);
+    }
+
+    async void TapGestureRecognizer_Tapped(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new PlanetDetailsPage(e.Parameter as Planet));
     }
 }

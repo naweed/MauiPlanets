@@ -22,11 +22,7 @@ public static class MauiProgram
 
                 static void MakeStatusBarTranslucent(Android.App.Activity activity)
                 {
-                    activity.Window.SetFlags(Android.Views.WindowManagerFlags.LayoutNoLimits, Android.Views.WindowManagerFlags.LayoutNoLimits);
-
-                    activity.Window.ClearFlags(Android.Views.WindowManagerFlags.TranslucentStatus);
-
-                    activity.Window.SetStatusBarColor(Android.Graphics.Color.Transparent);
+                    activity.Window.SetFlags(Android.Views.WindowManagerFlags.Fullscreen, Android.Views.WindowManagerFlags.Fullscreen);
                 }
 #endif
             });
