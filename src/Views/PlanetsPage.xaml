@@ -199,62 +199,63 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <CollectionView
-                        x:Name="lstPopularPlanets"
-                        HeightRequest="280"
-                        SelectionMode="Single"
-                        SelectionChanged="Planets_SelectionChanged">
+                    <ScrollView Orientation="Horizontal">
+                        <HorizontalStackLayout
+                            HeightRequest="280"
+                            Spacing="16"
+                            x:Name="lstPopularPlanets">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate
+                                    x:DataType="models:Planet">
+                                    <Border
+                                        VerticalOptions="Fill"
+                                        WidthRequest="220"
+                                        StrokeThickness="0"
+                                        Background="{Binding Background}"
+                                        Padding="20">
+                                        <Border.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                CommandParameter="{Binding .}"
+                                                Tapped="TapGestureRecognizer_Tapped"/>
+                                        </Border.GestureRecognizers>
 
-                        <CollectionView.ItemsLayout>
-                            <LinearItemsLayout
-                                Orientation="Horizontal"
-                                ItemSpacing="16" />
-                        </CollectionView.ItemsLayout>
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="24"/>
+                                        </Border.StrokeShape>
 
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate
-                                x:DataType="models:Planet">
-                                <Border
-                                    VerticalOptions="Fill"
-                                    WidthRequest="220"
-                                    StrokeThickness="0"
-                                    Background="{Binding Background}"
-                                    Padding="20">
+                                        <Grid 
+                                            RowDefinitions="*,Auto,Auto"
+                                            RowSpacing="4">
 
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="24"/>
-                                    </Border.StrokeShape>
+                                            <Image
+                                                Grid.Row="0"
+                                                Source="{Binding HeroImage}"
+                                                Rotation="-30"
+                                                Aspect="AspectFit"
+                                                VerticalOptions="Fill"
+                                                HorizontalOptions="Fill"/>
 
-                                    <Grid
-                                        RowDefinitions="*,Auto,Auto"
-                                        RowSpacing="4">
+                                            <Label
+                                                Grid.Row="1"
+                                                Style="{StaticResource FeaturedPlanetHeaderStyle}"
+                                                Text="{Binding Name}"
+                                                Margin="0,8,0,0"/>
 
-                                        <Image
-                                            Grid.Row="0"
-                                            Source="{Binding HeroImage}"
-                                            Rotation="-30"
-                                            Aspect="AspectFit"
-                                            VerticalOptions="Fill"
-                                            HorizontalOptions="Fill"/>
+                                            <Label
+                                                Grid.Row="2"
+                                                Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
+                                                Text="{Binding Subtitle}" />
 
-                                        <Label
-                                            Grid.Row="1"
-                                            Style="{StaticResource FeaturedPlanetHeaderStyle}"
-                                            Text="{Binding Name}"
-                                            Margin="0,8,0,0"/>
+                                        </Grid>
 
-                                        <Label
-                                            Grid.Row="2"
-                                            Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
-                                            Text="{Binding Subtitle}" />
+                                    </Border>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
 
-                                    </Grid>
+                        </HorizontalStackLayout>
+                    </ScrollView>
 
-                                </Border>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-
-                    </CollectionView>
+                    
 
 
                     <!-- More Section -->
@@ -269,57 +270,56 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <CollectionView
-                        x:Name="lstAllPlanets"
-                        HeightRequest="160"
-                        SelectionMode="Single"
-                        SelectionChanged="Planets_SelectionChanged">
+                    <ScrollView Orientation="Horizontal">
+                        <HorizontalStackLayout
+                            HeightRequest="160"
+                            Spacing="16"
+                            x:Name="lstAllPlanets">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate
+                                    x:DataType="models:Planet">
+                                    <Border
+                                        VerticalOptions="Fill"
+                                        WidthRequest="140"
+                                        StrokeThickness="0"
+                                        Background="{Binding Background}"
+                                        Padding="16">
 
-                        <CollectionView.ItemsLayout>
-                            <LinearItemsLayout
-                                Orientation="Horizontal"
-                                ItemSpacing="16" />
-                        </CollectionView.ItemsLayout>
+                                        <Border.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                CommandParameter="{Binding .}"
+                                                Tapped="TapGestureRecognizer_Tapped"/>
+                                        </Border.GestureRecognizers>
 
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate
-                                x:DataType="models:Planet">
-                                <Border
-                                    VerticalOptions="Fill"
-                                    WidthRequest="140"
-                                    StrokeThickness="0"
-                                    Background="{Binding Background}"
-                                    Padding="16">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="16"/>
+                                        </Border.StrokeShape>
 
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="16"/>
-                                    </Border.StrokeShape>
+                                        <Grid
+                                            RowDefinitions="*,Auto,Auto"
+                                            RowSpacing="4">
 
-                                    <Grid
-                                        RowDefinitions="*,Auto,Auto"
-                                        RowSpacing="4">
+                                            <Image
+                                                Grid.Row="0"
+                                                Source="{Binding HeroImage}"
+                                                Rotation="-30"
+                                                Aspect="AspectFit"                                        
+                                                VerticalOptions="Fill"
+                                                HorizontalOptions="Fill"/>
 
-                                        <Image
-                                            Grid.Row="0"
-                                            Source="{Binding HeroImage}"
-                                            Rotation="-30"
-                                            Aspect="AspectFit"                                        
-                                            VerticalOptions="Fill"
-                                            HorizontalOptions="Fill"/>
+                                            <Label
+                                                Grid.Row="1"
+                                                Style="{StaticResource AllPlanetHeaderStyle}"
+                                                Text="{Binding Name}"
+                                                Margin="0,4,0,0"/>
 
-                                        <Label
-                                            Grid.Row="1"
-                                            Style="{StaticResource AllPlanetHeaderStyle}"
-                                            Text="{Binding Name}"
-                                            Margin="0,4,0,0"/>
+                                        </Grid>
 
-                                    </Grid>
-
-                                </Border>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-
-                    </CollectionView>
+                                    </Border>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                            </HorizontalStackLayout>
+                        </ScrollView>
 
                 </VerticalStackLayout>
 

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android;net6.0-ios;</TargetFrameworks>
+		<TargetFrameworks>net7.0-android;net7.0-ios;</TargetFrameworks>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>MauiPlanets</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -41,41 +41,8 @@
 		<MauiImage Include="Resources\Images\*" />
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
-
 	<ItemGroup>
-	  <None Remove="Models\" />
-	  <None Remove="Views\" />
-	  <None Remove="ViewModels\" />
-	  <None Remove="Resources\Styles\" />
-	  <None Remove="Services\" />
-	  <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
-	  <None Remove="Resources\Fonts\Montserrat-Medium.ttf" />
-	  <None Remove="Resources\Fonts\Montserrat-SemiBold.ttf" />
-	  <None Remove="Microsoft.Maui.Extensions" />
-	  <None Remove="Microsoft.Maui.Dependencies" />
-	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Models\" />
-	  <Folder Include="Views\" />
-	  <Folder Include="ViewModels\" />
-	  <Folder Include="Resources\Styles\" />
-	  <Folder Include="Services\" />
-	</ItemGroup>
-	<ItemGroup>
-	  <MauiXaml Update="Views\StartPage.xaml">
-	    <SubType></SubType>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\PlanetsPage.xaml">
-	    <SubType></SubType>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\PlanetDetailsPage.xaml">
-	    <SubType></SubType>
-	  </MauiXaml>
-	</ItemGroup>
-	<ItemGroup>
-	  <MauiFont Include="Resources\Fonts\Montserrat-Bold.ttf" />
-	  <MauiFont Include="Resources\Fonts\Montserrat-Medium.ttf" />
-	  <MauiFont Include="Resources\Fonts\Montserrat-SemiBold.ttf" />
+	  <MauiFont Include="Resources\Fonts\*.ttf" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.Maui.Extensions" Version="6.0.536" />
